@@ -716,6 +716,37 @@
       color: var(--muted);
       text-align: center;
     }
+    .theme-toggle {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148,163,184,0.4);
+  color: #f9fafb;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  border-color: var(--accent2);
+}
+
+.light-mode {
+  --bg: #f8f9fb;
+  --bg-alt: #ffffff;
+  --text: #111;
+  --muted: #555;
+  --card: #ffffff;
+  --border: #ddd;
+  --accent: #7c3aed;
+  --accent2: #06b6d4;
+  background: radial-gradient(circle at top, #ffffff 0, #e9eef5 45%, #dce3ec 100%);
+}
+
+body, .skill-card, .contact-card, .slider-wrapper {
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
   </style>
 </head>
 <body>
@@ -732,6 +763,7 @@
         </div>
       </div>
       <div class="nav-links">
+       <button id="themeToggle" class="theme-toggle">🌙</button>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
@@ -1179,5 +1211,96 @@
     );
     reveals.forEach((el) => observer.observe(el));
   </script>
+<script>
+// THEME SWITCHER
+const toggleBtn = document.getElementById("themeToggle");
+const root = document.documentElement;
+
+function applyTheme(mode) {
+  if (mode === "light") {
+    document.body.classList.add("light-mode");
+    toggleBtn.textContent = "☀️";
+  } else {
+    document.body.classList.remove("light-mode");
+    toggleBtn.textContent = "🌙";
+  }
+  localStorage.setItem("theme", mode);
+}
+
+// Load saved mode
+const saved = localStorage.getItem("theme") || "dark";
+applyTheme(saved);
+
+// Button click
+toggleBtn.addEventListener("click", () => {
+  const current = document.body.classList.contains("light-mode") ? "light" : "dark";
+  applyTheme(current === "light" ? "dark" : "light");
+});
+
+// PARALLAX HERO
+document.addEventListener("mousemove", (e) => {
+  const orb = document.querySelector(".orbit");
+  if (!orb) return;
+  const x = (e.clientX - window.innerWidth / 2) * 0.01;
+  const y = (e.clientY - window.innerHeight / 2) * 0.01;
+  orb.style.transform = `translate(${x}px, ${y}px) rotate(360deg)`;
+});
+
+// 3D CARD TILT
+document.querySelectorAll(".skill-card").forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    card.style.transform = `rotateX(${(-y / 25)}deg) rotateY(${x / 25}deg)`;
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0)";
+  });
+});
+
+// PARTICLE BACKGROUND
+const canvas = document.createElement("canvas");
+document.body.appendChild(canvas);
+const ctx = canvas.getContext("2d");
+canvas.style.position = "fixed";
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.zIndex = -1;
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+let particles = Array.from({ length: 55 }).map(() => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  s: Math.random() * 1.6 + 0.4,
+  dx: (Math.random() - 0.5) * 0.3,
+  dy: (Math.random() - 0.5) * 0.3,
+}));
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach((p) => {
+    p.x += p.dx;
+    p.y += p.dy;
+
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+    ctx.fillStyle = "rgba(124, 58, 237, 0.6)";
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.s, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
 </body>
 </html>
