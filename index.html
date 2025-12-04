@@ -1,0 +1,1184 @@
+Ok brother. that new code looks messed up. never mind I used the code below. 
+but I want to add my images like u said before. write me the code and tell me where to paste them. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kushmakar Shrestha | IT Support • QA • Cyber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --accent: #7c3aed;
+      --accent-soft: rgba(124, 58, 237, 0.2);
+      --accent2: #22d3ee;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --card: #111827;
+      --border: #1f2933;
+      --radius-xl: 18px;
+      --radius-full: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --transition: all 0.25s ease;
+      --nav-height: 70px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.1));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--nav-height);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 2px solid rgba(34, 211, 238, 0.9);
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.35);
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-title span:first-child {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-title span:last-child {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--muted);
+      transition: var(--transition);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 999px;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: var(--muted);
+      font-size: 0.7rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 2.9rem);
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero h1 span.highlight {
+      background: linear-gradient(120deg, var(--accent2), var(--accent));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      padding: 0.55rem 1.15rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at 0 0, var(--accent2), var(--accent));
+      color: #0b1020;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+      border-color: rgba(148, 163, 184, 0.4);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent2);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      font-size: 1rem;
+    }
+
+    /* HERO RIGHT VISUAL */
+    .hero-right {
+      position: relative;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, rgba(34, 211, 238, 0.2), transparent),
+                  radial-gradient(circle at 70% 70%, rgba(124, 58, 237, 0.2), transparent);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      animation: spin 28s linear infinite;
+    }
+
+    .hero-core {
+      position: relative;
+      width: 200px;
+      border-radius: 26px;
+      background: radial-gradient(circle at 20% 0%, #22d3ee, #7c3aed 60%, #020617);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero-photo-wrapper {
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .hero-photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.05);
+      transform: scale(1.05);
+    }
+
+    .hero-core-content {
+      padding: 0.7rem 0.9rem 0.9rem;
+      text-align: left;
+    }
+
+    .hero-core-content h2 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-core-content p {
+      font-size: 0.75rem;
+      color: #e5e7eb;
+    }
+
+    .hero-chip {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.7rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-chip span:first-child {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+    }
+
+    .floating-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.85);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      backdrop-filter: blur(4px);
+    }
+
+    .float-orb {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #22d3ee, #0f172a);
+      opacity: 0.7;
+      animation: float 7s ease-in-out infinite alternate;
+    }
+
+    .float-orb:nth-child(1) {
+      top: 10%;
+      left: 5%;
+      animation-delay: 0.3s;
+    }
+
+    .float-orb:nth-child(2) {
+      top: 70%;
+      right: 0;
+      animation-delay: 1.2s;
+    }
+
+    .float-orb:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+      animation-delay: 2s;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(-15px) translateX(8px);
+      }
+    }
+
+    /* SECTION BASE */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title span.marker {
+      width: 8px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+    }
+
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* SKILLS GRID */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.18), var(--card));
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.65);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-card p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .skill-tags span {
+      font-size: 0.7rem;
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--muted);
+    }
+
+    /* EXPERIENCE TIMELINE */
+    .timeline {
+      border-left: 1px solid rgba(148, 163, 184, 0.3);
+      padding-left: 1.2rem;
+      margin-left: 0.4rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.4rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -1.3rem;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.25);
+    }
+
+    .timeline-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .timeline-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-body {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    /* PORTFOLIO SLIDER */
+    .slider-wrapper {
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.9));
+      border-radius: 22px;
+      padding: 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 0.4rem 0.1rem 0.2rem;
+    }
+
+    .slide-inner {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .slide-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .slide-title {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .slide-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .slide-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .slide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip-link {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .chip-link:hover {
+      border-color: var(--accent2);
+      color: var(--text);
+    }
+
+    .slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .slider-buttons {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .slider-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .slider-btn:hover {
+      border-color: var(--accent2);
+      color: var(--text);
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .slider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.4);
+    }
+
+    .slider-dot.active {
+      width: 18px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.15), rgba(15, 23, 42, 0.95));
+      border-radius: 20px;
+      padding: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) minmax(0, 1.3fr);
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 780px) {
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-meta {
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .contact-chip {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 1.7rem 0 0.5rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="avatar">
+          <!-- your KS logo image -->
+          <img src="ks-logo.jpg" alt="Kushmakar Shrestha" />
+        </div>
+        <div class="nav-title">
+          <span>Kushmakar Shrestha</span>
+          <span>IT Support • QA • Cyber (Entry)</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left reveal">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>Actively seeking IT Support / QA / SOC roles</span>
+        </div>
+        <h1>
+          IT Support, QA & <span class="highlight">Security-minded</span><br />
+          with real hands-on grit.
+        </h1>
+        <p class="hero-sub">
+          I’m an Australian-trained IT graduate with deep practical skills in troubleshooting,
+          testing and security fundamentals — backed by years of high-pressure work in
+          kitchens, farms and commercial sites. I solve problems fast, document clearly,
+          and learn even faster.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">Bachelor of IT (Web & Mobile)</span>
+          <span class="badge">Adv. Diploma Network Security</span>
+          <span class="badge">Diploma of IT</span>
+          <span class="badge">Google IT Support (in progress)</span>
+          <span class="badge">PTE 76 → targeting 79+</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">
+            <!-- TODO: replace # with your resume link -->
+            <span class="btn-icon">📂</span>
+            <span>Download IT Resume</span>
+          </a>
+          <a href="https://github.com/KushmakarShrestha/Kushmakar-IT-Portfolio" target="_blank" class="btn btn-ghost">
+            <span class="btn-icon">💻</span>
+            <span>View GitHub Portfolio</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span class="btn-icon">📩</span>
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="orbit"></div>
+        <div class="float-orb"></div>
+        <div class="float-orb"></div>
+        <div class="float-orb"></div>
+
+        <div class="hero-core">
+          <div class="hero-photo-wrapper">
+            <!-- your “available now” photo -->
+            <img src="available-now.jpg" alt="Kushmakar available for work" />
+          </div>
+          <div class="hero-core-content">
+            <h2>“One in 7 billion” mindset</h2>
+            <p>
+              From rebuilding PCs as a kid to handling $20k+ dinner rushes and outdoor labour —
+              I bring calm, precision and resilience into every IT problem I touch.
+            </p>
+          </div>
+
+          <div class="hero-chip">
+            <span></span>
+            <span>Available now · NSW / AU</span>
+          </div>
+          <div class="floating-tag">Sydney · Open to relocate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / SKILLS -->
+    <section id="about" class="reveal">
+      <h2 class="section-title">
+        <span class="marker"></span> About Me
+      </h2>
+      <p class="section-sub">
+        I’m a Nepal-born, Australia-trained IT graduate who mixes
+        <strong>real world hustle</strong> (kitchens, farms, cleaning, malls) with
+        <strong>technical curiosity</strong> (network security, QA, helpdesk support).
+        I’ve formatted PCs since I was a kid, replaced RAM and hard drives by age 12,
+        and now I’m turning that lifelong comfort around technology into a professional career.
+      </p>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2 class="section-title">
+        <span class="marker"></span> Core Skill Areas
+      </h2>
+      <p class="section-sub">
+        My focus is on three pillars: <strong>IT Support</strong> to keep people productive,
+        <strong>QA Testing</strong> to keep products reliable, and
+        <strong>Security Fundamentals</strong> to keep systems safe.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🖥️</div>
+          <h3>IT Support & Helpdesk</h3>
+          <p>
+            Fixing issues calmly under pressure — from Windows problems to WiFi,
+            printers and software installs.
+          </p>
+          <div class="skill-tags">
+            <span>Windows troubleshooting</span>
+            <span>OS formatting</span>
+            <span>Hardware swap (RAM/HDD)</span>
+            <span>Network basics</span>
+            <span>User support</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🧪</div>
+          <h3>QA Testing (Manual + Automation)</h3>
+          <p>
+            Designing test cases, logging bugs and using tools to make sure
+            applications behave exactly as expected.
+          </p>
+          <div class="skill-tags">
+            <span>Test cases & plans</span>
+            <span>Bug reports</span>
+            <span>UI/UX & regression</span>
+            <span>Selenium basics</span>
+            <span>Postman basics</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🛡️</div>
+          <h3>Cyber & SOC Foundations</h3>
+          <p>
+            Network security training and log-reading mindset for beginner SOC
+            and security support roles.
+          </p>
+          <div class="skill-tags">
+            <span>Network security</span>
+            <span>Logs & events</span>
+            <span>SIEM fundamentals</span>
+            <span>Firewalls basics</span>
+            <span>Threat awareness</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SLIDER -->
+    <section id="portfolio" class="reveal">
+      <h2 class="section-title">
+        <span class="marker"></span> Portfolio Highlights
+      </h2>
+      <p class="section-sub">
+        A snapshot of my practical work — from structured test cases and bug reports
+        to troubleshooting logs, WordPress testing and AI-powered workflows.
+        Full files are available in my GitHub portfolio.
+      </p>
+
+      <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="slide-inner">
+              <div class="slide-label">QA • TEST DESIGN</div>
+              <div class="slide-title">Login Test Suite (Web App)</div>
+              <div class="slide-desc">
+                A structured set of test cases for validating login flows — covering
+                valid logins, invalid credentials, blank fields and edge cases.
+              </div>
+              <div class="slide-meta">
+                Format: Excel • Focus: Functional & Negative Testing
+              </div>
+              <div class="slide-links">
+                <span class="chip-link">TestCases_Login.xlsx</span>
+                <span class="chip-link">Manual QA</span>
+                <span class="chip-link">Edge cases</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="slide-inner">
+              <div class="slide-label">QA • DEFECT MANAGEMENT</div>
+              <div class="slide-title">Bug Reports (Jira-Style)</div>
+              <div class="slide-desc">
+                Clear, reproducible bug reports describing environment, steps,
+                expected vs actual behaviour, severity and priority.
+              </div>
+              <div class="slide-meta">
+                Format: DOCX • Focus: Communication & Detail
+              </div>
+              <div class="slide-links">
+                <span class="chip-link">BugReports.docx</span>
+                <span class="chip-link">High severity</span>
+                <span class="chip-link">Contact form & login</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="slide-inner">
+              <div class="slide-label">IT SUPPORT • TROUBLESHOOTING</div>
+              <div class="slide-title">Troubleshooting Logbook</div>
+              <div class="slide-desc">
+                Helpdesk-style logs capturing how I diagnose and resolve issues like
+                WiFi failures, slow systems and printer problems.
+              </div>
+              <div class="slide-meta">
+                Format: DOCX • Focus: Problem-Solving Process
+              </div>
+              <div class="slide-links">
+                <span class="chip-link">TroubleshootingLogs.docx</span>
+                <span class="chip-link">DNS issues</span>
+                <span class="chip-link">Performance tuning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide">
+            <div class="slide-inner">
+              <div class="slide-label">WEB • WORDPRESS TESTING</div>
+              <div class="slide-title">WordPress Site QA & Hardening</div>
+              <div class="slide-desc">
+                Functional checks (navigation, forms), UI/UX review, plugin update
+                testing, basic security and performance checks on a WordPress site.
+              </div>
+              <div class="slide-meta">
+                Format: Markdown • Focus: Functional, UI & Security
+              </div>
+              <div class="slide-links">
+                <span class="chip-link">WordPress-Testing-Notes.md</span>
+                <span class="chip-link">Responsive checks</span>
+                <span class="chip-link">GTMetrix & PageSpeed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="slide">
+            <div class="slide-inner">
+              <div class="slide-label">AI • MODERN WORKFLOWS</div>
+              <div class="slide-title">AI-Assisted Testing & Logs</div>
+              <div class="slide-desc">
+                Using AI tools like ChatGPT to expand test cases, analyse logs and
+                draft automation ideas — boosting coverage and speed.
+              </div>
+              <div class="slide-meta">
+                Format: Markdown • Focus: AI + QA + Security synergy
+              </div>
+              <div class="slide-links">
+                <span class="chip-link">AI-Testing-Workflow.md</span>
+                <span class="chip-link">Log analysis</span>
+                <span class="chip-link">Automation ideas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <div class="slider-buttons">
+            <button class="slider-btn" id="prevBtn">‹</button>
+            <button class="slider-btn" id="nextBtn">›</button>
+          </div>
+          <div class="slider-dots" id="sliderDots">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+      <h2 class="section-title">
+        <span class="marker"></span> Real-World Experience
+      </h2>
+      <p class="section-sub">
+        My career started far from a quiet office — in hot kitchens, farms and busy malls.
+        That’s where I learned to handle pressure, keep standards high, and work
+        with all kinds of people. Now I bring that same discipline into IT.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-title">Kitchen Supervisor • My Fitness Kitchen</div>
+          <div class="timeline-meta">Marrickville, NSW • 2018–2022</div>
+          <div class="timeline-body">
+            Led kitchen teams, delegated tasks, kept operations smooth and handled
+            last-minute problems — very similar to managing ticket queues and
+            production incidents in IT.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-title">Line Cook / Assistant Chef • Holiday Inn Sydney Airport</div>
+          <div class="timeline-meta">Mascot, NSW • 2022–2024</div>
+          <div class="timeline-body">
+            Ran high-volume service doing up to $15k–$20k nights. Required fast
+            decisions, careful timing, and consistent quality under heavy pressure —
+            mindset that fits perfectly with incident response and tight QA cycles.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-title">Commercial & Mall Cleaner • Various Sites</div>
+          <div class="timeline-meta">NSW • 2019–Present</div>
+          <div class="timeline-body">
+            Looked after strata, malls and retail sites. Followed checklists,
+            reported issues and maintained standards — similar to following
+            runbooks, SOPs and test plans in IT support and QA.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2 class="section-title">
+        <span class="marker"></span> Contact & Links
+      </h2>
+      <p class="section-sub">
+        I’m open to junior roles in IT Support, QA Testing and Entry-Level SOC teams
+        — in Australia or remotely. Let’s talk about how I can help your team.
+      </p>
+
+      <div class="contact-card">
+        <div>
+          <p>
+            If you’re looking for someone who can stay calm under pressure, learn
+            fast and solve problems without drama, I’d love to connect.
+          </p>
+          <div class="contact-meta">
+            📧 Email:
+            <a href="mailto:kushmakarshrestha@gmail.com">
+              kushmakarshrestha@gmail.com
+            </a>
+          </div>
+          <div class="contact-meta">📍 Based in Sydney, NSW</div>
+          <div class="contact-meta">📱 Phone: 0404 537 966</div>
+          <div class="contact-chip-row">
+            <span class="contact-chip">IT Support</span>
+            <span class="contact-chip">QA Testing</span>
+            <span class="contact-chip">Entry SOC</span>
+            <span class="contact-chip">WordPress & Web</span>
+          </div>
+        </div>
+        <div>
+          <p><strong>Key Links</strong></p>
+          <p class="contact-meta">
+            🔗 GitHub:
+            <a href="https://github.com/KushmakarShrestha/Kushmakar-IT-Portfolio" target="_blank">
+              github.com/KushmakarShrestha/Kushmakar-IT-Portfolio
+            </a>
+          </p>
+          <p class="contact-meta">
+            🔗 LinkedIn:
+            <span style="color: var(--muted);">[add your LinkedIn URL here]</span>
+          </p>
+          <p class="contact-meta">
+            📄 Resume:
+            <span style="color: var(--muted);">[link to PDF or DOCX]</span>
+          </p>
+          <p class="contact-meta">
+            💬 Happy to discuss roles in: Sydney • Perth • NZ • Canada • EU
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built by Kushmakar • Crafted with care, curiosity and a bit of chaos.
+  </footer>
+
+  <script>
+    // Slider logic
+    const slider = document.getElementById("slider");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const dots = Array.from(document.getElementById("sliderDots").children);
+    let currentSlide = 0;
+    const totalSlides = slider.children.length;
+
+    function updateSlider() {
+      const offset = -currentSlide * 100;
+      slider.style.transform = "translateX(" + offset + "%)";
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentSlide);
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        currentSlide = index;
+        updateSlider();
+      });
+    });
+
+    // Auto-slide
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    }, 9000);
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    reveals.forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
