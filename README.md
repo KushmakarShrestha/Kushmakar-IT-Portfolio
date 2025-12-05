@@ -1,90 +1,122 @@
-# 💻 Kushmakar Shrestha — IT Support | QA Tester | Cyber Foundations  
-### Sydney, Australia | Open to Relocation | Actively Seeking Junior IT Roles  
+Kushmakar Shrestha — IT Support • QA • Cybersecurity Foundations
+📍 Sydney NSW | 🌐 kushmakarshrestha.github.io/Kushmakar-IT-Portfolio/
+📧 kushmakarshrestha@gmail.com
+ | 🎧 Entry-Level IT Support | L1 Helpdesk | QA Tester | SOC Trainee
+🚀 About This Portfolio
 
-Welcome to my **IT Portfolio**, showcasing my hands-on work across:
+This repository contains my hands-on technical work built while preparing for IT Support, QA Testing, and Cybersecurity roles.
+Every folder demonstrates real workflows, structured documentation, and problem-solving habits similar to what is used in professional environments.
 
-- **IT Support & Troubleshooting**
-- **QA Testing (Manual)**
-- **Cybersecurity Foundations (SOC mindset)**
-- **WordPress & Web Fundamentals**
-- **AI-Assisted Technical Workflows**
+My goal is simple:
+Learn fast. Work hard. Build real capability. Start my IT career in NSW.
 
-I built this portfolio to demonstrate the **real skills, mindset and documentation style** required in modern IT environments.
+📂 Portfolio Structure
+1. 🖥 Troubleshooting Logs (25+)
 
----
+Realistic service desk logs covering:
 
-## 🔧 Core Skill Areas
+Network drops (DHCP, DNS, VPN)
 
-### 🖥️ IT Support / Helpdesk  
-- Windows troubleshooting  
-- OS installation & recovery  
-- User account setup (Microsoft/Google)  
-- Printer/Wi-Fi issues  
-- Hardware swaps (RAM, HDD/SSD)  
-- Outlook, Teams, Chrome issue diagnosis  
-- Ticket-based problem solving  
+Windows OS issues, BSOD, profiles
 
-### 🧪 Manual QA Testing  
-- Test case design  
-- Bug reporting (Jira-style)  
-- Regression testing  
-- UI/UX checks  
-- WordPress testing  
-- Documentation consistency  
+Application failures (Outlook, Teams, Chrome)
 
-### 🛡 Cybersecurity Foundations  
-- Log analysis  
-- Incident triage mindset  
-- MFA troubleshooting  
-- Understanding of SIEM workflow  
-- Network & security fundamentals  
+Hardware faults and diagnosis
 
----
+Step-by-step resolutions with timestamps
 
-## 📂 Portfolio Structure
-/AI-Workflows
-/Bug-Reports
-/Test-Cases
-/Troubleshooting-Logs
-/WordPress-Testing
-index.html → My full portfolio website
+📁 /Troubleshooting-Logs/
 
-Each folder contains **realistic, structured examples** demonstrating my ability to work through technical issues logically and professionally.
+2. 🧪 QA Testing Projects
 
----
+Includes:
 
-## ⚡ Highlight Projects
+Test case suites
 
-### ✔ 25+ Troubleshooting Logs (Real-World Simulation)  
-Structured, timestamped logs documenting root-cause analysis, steps taken, and resolutions.  
-Mirrors Level 1/2 Helpdesk workflow.
+Regression test notes
 
-### ✔ QA Test Suites & Bug Reports  
-Includes login test cases, regression scenarios, and Jira-style defect documentation.
+Functional/UI testing
 
-### ✔ Cyber Foundations  
-Small SOC-style exercises involving anomaly detection and basic investigation.
+Jira-style bug reports
 
-### ✔ WordPress Testing  
-Functional, UI, and plugin security notes.
+📁 /Test-Cases/
+📁 /Bug-Reports/
 
----
+3. 🔒 Cybersecurity Foundations
 
-## 🌐 Live Portfolio Website  
-🔗 **https://kushmakarshrestha.github.io/Kushmakar-IT-Portfolio/**  
+SOC-style exercises:
 
-A custom-designed portfolio showcasing my skills, experience and style. Built manually with HTML/CSS/JS.
+Log analysis
 
----
+Incident classification
 
-## 📫 Contact  
-📧 kushmakarshrestha@gmail.com  
-📍 Sydney, NSW  
-📱 0404 537 966  
-🔗 LinkedIn: www.linkedin.com/in/kushmakar-shrestha-438618211  
-🔗 GitHub: https://github.com/KushmakarShrestha  
+MFA troubleshooting
 
----
+SIEM-style investigation logic
 
-### 🚀 My Mindset  
-> “Fast learner, calm under pressure, documentation-first approach, and hungry to grow in IT.”  
+📁 /AI-Workflows/ (log analysis, automation ideas)
+
+4. 🌐 WordPress & Web Testing
+
+WordPress QA checklist
+
+Plugin testing
+
+Security & performance review
+
+📁 /WordPress-Testing/
+
+5. 🖥 My IT Portfolio Website
+
+Custom-built using HTML/CSS/JS, including:
+
+Light/Dark mode toggle
+
+Floating animations
+
+Responsive design
+
+Hero cards + interactive UI
+
+Links to GitHub, resume, LinkedIn
+
+🔗 Live Site: kushmakarshrestha.github.io/Kushmakar-IT-Portfolio/
+
+🧰 Technologies Used
+
+Windows 10/11 Troubleshooting
+
+Jira-style bug reporting
+
+HTML / CSS / JavaScript
+
+WordPress
+
+Git & GitHub
+
+Networking fundamentals
+
+Log analysis
+
+AI-assisted workflows
+
+🎯 Career Goal
+
+To begin my IT career in a role where I can:
+
+Support users
+
+Troubleshoot issues
+
+Contribute to QA/test work
+
+Learn enterprise tools like Jira, ServiceNow, AD, Intune
+
+Grow into Level 2 or SOC analyst roles
+
+✉️ Contact
+
+📧 kushmakarshrestha@gmail.com
+
+🔗 LinkedIn: linkedin.com/in/kushmakar-shrestha-438618211
+🌐 Portfolio: kushmakarshrestha.github.io/Kushmakar-IT-Portfolio/
