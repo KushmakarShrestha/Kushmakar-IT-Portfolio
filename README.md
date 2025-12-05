@@ -69,8 +69,20 @@ To begin my IT career in a role where I can:
 •	Grow into Level 2 or SOC analyst roles
 ________________________________________
 ✉️ Contact
+KUSHMAKAR SHRESTHA
+Junior IT Support | QA Tester | Cyber Security Foundations | Problem Solver | Based in Sydney
+Sydney, NSW
+📱 0404 537 966
 📧 kushmakarshrestha@gmail.com
-🔗 LinkedIn: linkedin.com/in/kushmakar-shrestha-438618211
-🌐 Portfolio: kushmakarshrestha.github.io/Kushmakar-IT-Portfolio/
+
+Portfolio:
+https://kushmakarshrestha.github.io/Kushmakar-IT-Portfolio 
+
+GitHub:
+https://github.com/KushmakarShrestha/Kushmakar-IT-Portfolio.git
+
+LinkedIn: 
+https://linkedin.com/in/kushmakar-shrestha-438618211
+
 ________________________________________
 
