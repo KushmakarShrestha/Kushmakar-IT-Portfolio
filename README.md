@@ -42,4 +42,49 @@ I built this portfolio to demonstrate the **real skills, mindset and documentati
 ---
 
 ## 📂 Portfolio Structure
+/AI-Workflows
+/Bug-Reports
+/Test-Cases
+/Troubleshooting-Logs
+/WordPress-Testing
+index.html → My full portfolio website
 
+Each folder contains **realistic, structured examples** demonstrating my ability to work through technical issues logically and professionally.
+
+---
+
+## ⚡ Highlight Projects
+
+### ✔ 25+ Troubleshooting Logs (Real-World Simulation)  
+Structured, timestamped logs documenting root-cause analysis, steps taken, and resolutions.  
+Mirrors Level 1/2 Helpdesk workflow.
+
+### ✔ QA Test Suites & Bug Reports  
+Includes login test cases, regression scenarios, and Jira-style defect documentation.
+
+### ✔ Cyber Foundations  
+Small SOC-style exercises involving anomaly detection and basic investigation.
+
+### ✔ WordPress Testing  
+Functional, UI, and plugin security notes.
+
+---
+
+## 🌐 Live Portfolio Website  
+🔗 **https://kushmakarshrestha.github.io/Kushmakar-IT-Portfolio/**  
+
+A custom-designed portfolio showcasing my skills, experience and style. Built manually with HTML/CSS/JS.
+
+---
+
+## 📫 Contact  
+📧 kushmakarshrestha@gmail.com  
+📍 Sydney, NSW  
+📱 0404 537 966  
+🔗 LinkedIn: www.linkedin.com/in/kushmakar-shrestha-438618211  
+🔗 GitHub: https://github.com/KushmakarShrestha  
+
+---
+
+### 🚀 My Mindset  
+> “Fast learner, calm under pressure, documentation-first approach, and hungry to grow in IT.”  
