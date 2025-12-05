@@ -71,7 +71,7 @@ ________________________________________
 ✉️ Contact
 KUSHMAKAR SHRESTHA
 Junior IT Support | QA Tester | Cyber Security Foundations | Problem Solver | Based in Sydney
-Sydney, NSW
+
 📱 0404 537 966
 📧 kushmakarshrestha@gmail.com
 
